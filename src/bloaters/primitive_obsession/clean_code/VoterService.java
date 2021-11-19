@@ -18,15 +18,14 @@ public class VoterService {
     public void casteVote(String symbol) {
 
         switch (symbol){
-            case "Tree" -> {
+            case "Tree": {
                 System.out.println("Voted for tree");
                 break;
             }
-            case "Flower" -> {
+            case "Flower": {
                 System.out.println("Voted for Flower");
                 break;
             }
-
         }
 
     }
