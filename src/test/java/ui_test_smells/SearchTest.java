@@ -17,7 +17,8 @@ public class SearchTest extends BaseTest{
 
     @Test
     public void testSearchForTitle(){
-        String title = PropertyFileHandler.getValue("book_title");
+        String title = "Java For Testers";
+        //PropertyFileHandler.getValue("book_title")
         page.search(title);
         page.checkIsBookVisible(title);
     }

@@ -1,0 +1,7 @@
+1. ID (if unique)
+2. Name (if unique)
+3. Class name
+4. CSS Selector
+5. XPath without text or indexing
+6. Link text / partial link text
+7. XPath with text and/or indexing

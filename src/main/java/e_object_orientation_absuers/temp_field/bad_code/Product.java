@@ -8,22 +8,21 @@ class Product {
     double basePrice;
     double totalPrice;
 
-
     public double getPrice(int quantity, double itemPrice) {
         this.quantity = quantity;
         this.itemPrice = itemPrice;
 
-        basePrice();
-        discountFactor();
+        getBasePrice();
+        getDiscountFactor();
         totalPrice =  basePrice * discountFactor;
         return totalPrice;
     }
 
-    private void basePrice() {
+    private void getBasePrice() {
         basePrice = quantity * itemPrice;
     }
 
-    private void discountFactor() {
+    private void getDiscountFactor() {
         if (basePrice > 1000) {
             discountFactor = 0.95;
         }
