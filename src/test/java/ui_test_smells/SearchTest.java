@@ -22,5 +22,4 @@ public class SearchTest extends BaseTest{
         page.search(title);
         page.checkIsBookVisible(title);
     }
-
 }
