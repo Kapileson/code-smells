@@ -7,16 +7,16 @@ class CollegeAdmission {
 
     private String firstName;
     private String lastName;
-    private String dept;
+    private String department;
     private int age;
     private String emailAddress;
     private long phoneNumber;
 
 
-    public CollegeAdmission(String firstName, String lastName, int age, String emailAddress, long phoneNumber, String dept) {
+    public CollegeAdmission(String firstName, String lastName, int age, String emailAddress, long phoneNumber, String department) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dept = dept;
+        this.department = department;
         this.age = age;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
@@ -31,13 +31,13 @@ class CollegeAdmission {
             int admissionNumber = new Random().nextInt();
             System.out.println("Admission number is: "+admissionNumber);
 
-            addDepartment(admissionNumber,dept);
+            addDepartment(admissionNumber,department);
 
             String fileName = this.firstName + this.lastName+".txt";
             try(FileWriter writer = new FileWriter(fileName)){
                 writer.write("firstname lastName age dept emailAddress phoneNumber");
                 writer.write("\n");
-                writer.write(this.firstName+" "+this.lastName+" "+this.age+" "+this.dept+" "+this.emailAddress+" "+this.phoneNumber);
+                writer.write(this.firstName+" "+this.lastName+" "+this.age+" "+this.department+" "+this.emailAddress+" "+this.phoneNumber);
             } catch (IOException e) {
                 e.printStackTrace();
             }

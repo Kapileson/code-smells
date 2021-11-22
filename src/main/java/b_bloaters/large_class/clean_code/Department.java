@@ -1,14 +1,14 @@
 package b_bloaters.large_class.clean_code;
 
 public class Department {
-    private String dept;
+    private String department;
 
-    public Department(String dept) {
-        this.dept=dept;
+    public Department(String department) {
+        this.department=department;
     }
 
     public void addDepartment(int admissionNumber){
-        switch (dept){
+        switch (department){
             case "CSE":{
                 System.out.println(admissionNumber+ " Added to CSE");
                 break;
@@ -25,6 +25,6 @@ public class Department {
 }
 
     public String getDepartment() {
-           return this.dept;
+           return this.department;
     }
     }

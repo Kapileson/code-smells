@@ -4,17 +4,17 @@ public class BookingService {
 
     private String from;
     private String to;
-    private String departDate;
+    private String departureDate;
     private String returnDate;
 
     private String name;
     private int age;
 
-    public BookingService(String from, String to, String departDate,String returnDate, String name, int age) {
+    public BookingService(String from, String to, String departureDate,String returnDate, String name, int age) {
         this.from = from;
         this.to = to;
-        this.departDate = departDate;
-        this.departDate = returnDate;
+        this.departureDate = departureDate;
+        this.departureDate = returnDate;
         this.name = name;
         this.age = age;
     }

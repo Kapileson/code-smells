@@ -7,7 +7,7 @@ import java.util.Properties;
 public class PropertyFileHandler {
 
     private static Properties prop;
-    private static String filePath = "/Users/kapileson/Desktop/code-smells/src/main/resources/test_data.properties";
+    private static String filePath = "/Users/kapileson/Desktop/code-smells/src/main/resources/book_app_qa_env.properties";
 
     private PropertyFileHandler() {
     }
