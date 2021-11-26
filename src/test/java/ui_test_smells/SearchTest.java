@@ -1,25 +1,18 @@
 package ui_test_smells;
 
+import base.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import ui_test_smells.pages.SearchPage;
 import ui_test_smells.utils.PropertyFileHandler;
 
-public class SearchTest extends BaseTest{
-
-    WebDriver driver;
-    SearchPage page;
-
-    public SearchTest(){
-        driver = getWebDriver();
-        page = new SearchPage(driver);
-    }
+public class SearchTest extends BaseTest {
 
     @Test
     public void testSearchForTitle(){
-        String title = PropertyFileHandler.getValue("book_title");
-        page.search(title);
-        page.checkIsBookVisible(title);
+        SearchPage searchPage = new SearchPage(driver);
+        String title = "Java For Testers";
+        //PropertyFileHandler.getValue("book_title")
+        searchPage.search(title);
+        searchPage.checkIsBookVisible(title);
     }
-
 }
