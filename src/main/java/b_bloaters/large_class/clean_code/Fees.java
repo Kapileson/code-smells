@@ -1,7 +1,7 @@
 package b_bloaters.large_class.clean_code;
 
 public class Fees {
-    private String feesReceiptNumber;
+    private final String feesReceiptNumber;
 
     public Fees(String feesReceiptNumber) {
         this.feesReceiptNumber = feesReceiptNumber;
@@ -11,4 +11,7 @@ public class Fees {
         return true;
      }
 
+    public String getFeesReceiptNumber() {
+        return feesReceiptNumber;
+    }
 }

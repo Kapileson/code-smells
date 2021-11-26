@@ -1,7 +1,7 @@
 package b_bloaters.large_class.clean_code;
 
 public class Department {
-    private String dept;
+    private final String dept;
 
     public Department(String dept) {
         this.dept=dept;

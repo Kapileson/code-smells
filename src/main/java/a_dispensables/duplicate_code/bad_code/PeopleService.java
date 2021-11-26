@@ -4,27 +4,31 @@ public class PeopleService {
 
     private String personName;
 
-    public PeopleService(String personName) {
-        this.personName = personName;
-    }
+    public PeopleService() {}
 
     public String findPerson(String[] people, int age){
-        
-        for (int i = 0; i < people.length; i++) {
-            if (people[i].equals("Don")){
-                return "Don";
-            }
-            if (people[i].equals("John")){
-                return "John";
-            }
-            if (people[i].equals("Kent")){
-                return "Kent";
+
+        for (String person : people) {
+            try{
+                if (person.equals("Don")) {
+                    return "Don";
+                }
+                if (person.equals("John")) {
+                    return "John";
+                }
+                if (person.equals("Kent")) {
+                    return "Kent";
+                }
+            }catch (NullPointerException e){
+                e.printStackTrace();
+            }catch (ArithmeticException e){
+                e.printStackTrace();
             }
         }
         return "Not Found";
     }
 
     private String toLowerCase(String name){
-            return name.toLowerCase();
+        return name.toLowerCase();
     }
 }

@@ -1,12 +1,11 @@
-package c_message_chains.clean_code;
+package c_couplers_message_chains.bad_code;
 
 import java.util.Map;
 
 public class Invoice {
 
-    private Customer customer;
+    private final Customer customer;
     private Map<String,Double> invoiceItems;
-    private final double SHIPPING_COST_OUTSIDE_INDIA = 1000;
     public Invoice(Customer customer) {
         this.customer = customer;
     }
@@ -16,13 +15,12 @@ public class Invoice {
     }
 
     public double getTotalPrice(String itemName){
-        double invoiceTotal = invoiceItems.get(itemName);
-
-        if(!customer.isInIndia()){
+        final double SHIPPING_COST_OUTSIDE_INDIA = 1000;
+        double invoiceTotal = this.invoiceItems.get(itemName);
+        
+        if(!customer.getAddress().getCountry().isOutsideIndia()){
             invoiceTotal += SHIPPING_COST_OUTSIDE_INDIA;
         }
         return invoiceTotal;
     }
-
-
 }

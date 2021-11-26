@@ -1,4 +1,4 @@
-package c_message_chains.clean_code;
+package c_couplers_message_chains.clean_code;
 
 public class Customer {
     private Address address;

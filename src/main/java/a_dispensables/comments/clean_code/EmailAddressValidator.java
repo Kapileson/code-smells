@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 public class EmailAddressValidator {
 
     /*Pattern to validate valid email address.
-    Example; demo@demo.com || demo@demo.net */
-    final String EMAIL_ADDRESS_PATTERN = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[(com)|(net)]{2,6}$";
+    Example; demo@demo.com */
+    final String EMAIL_ADDRESS_PATTERN = "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$";
 
     public boolean isValidEmailAddress(String emailAddress) {
         Pattern pattern = Pattern.compile(EMAIL_ADDRESS_PATTERN);

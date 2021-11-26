@@ -1,10 +1,10 @@
 package b_bloaters.large_class.clean_code;
 
 public class Student {
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String address;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
+    private final String address;
 
     Student(String firstName,String lastName,String address,int age){
         this.firstName = firstName;

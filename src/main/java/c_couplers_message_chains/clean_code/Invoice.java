@@ -1,6 +1,5 @@
-package c_message_chains.bad_code;
+package c_couplers_message_chains.clean_code;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 public class Invoice {
@@ -18,11 +17,11 @@ public class Invoice {
 
     public double getTotalPrice(String itemName){
         double invoiceTotal = invoiceItems.get(itemName);
-        
-        if(!customer.getAddress().getCountry().isOutsideIndia()){
+
+        if(!customer.isInIndia()){
             invoiceTotal += SHIPPING_COST_OUTSIDE_INDIA;
         }
         return invoiceTotal;
-
     }
+
 }

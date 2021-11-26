@@ -1,7 +1,7 @@
-package c_message_chains.bad_code;
+package c_couplers_message_chains.bad_code;
 
 public class Address {
-    private Country country;
+    private final Country country;
 
     public Address(Country country) {
         this.country = country;

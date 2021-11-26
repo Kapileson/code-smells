@@ -1,7 +1,7 @@
-package c_message_chains.bad_code;
+package c_couplers_message_chains.bad_code;
 
 public class Customer {
-    private Address address;
+    private final Address address;
 
     public Customer(Address address) {
         this.address = address;
@@ -10,4 +10,5 @@ public class Customer {
     public Address getAddress(){
         return address;
     }
+
 }

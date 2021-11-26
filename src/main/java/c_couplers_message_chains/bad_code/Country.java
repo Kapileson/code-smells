@@ -1,4 +1,4 @@
-package c_message_chains.clean_code;
+package c_couplers_message_chains.bad_code;
 
 public class Country {
 

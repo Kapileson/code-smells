@@ -5,13 +5,12 @@ import java.util.Random;
 
 class CollegeAdmission {
 
-    private String firstName;
-    private String lastName;
-    private String dept;
-    private int age;
-    private String emailAddress;
-    private long phoneNumber;
-
+    private final String firstName;
+    private final String lastName;
+    private final String dept;
+    private final int age;
+    private final String emailAddress;
+    private final long phoneNumber;
 
     public CollegeAdmission(String firstName, String lastName, int age, String emailAddress, long phoneNumber, String dept) {
         this.firstName = firstName;
