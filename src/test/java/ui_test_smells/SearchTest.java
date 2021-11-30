@@ -5,6 +5,8 @@ import org.junit.Test;
 import ui_test_smells.pages.SearchPage;
 import ui_test_smells.utils.PropertyFileHandler;
 
+import static org.junit.Assert.assertTrue;
+
 public class SearchTest extends BaseTest {
 
     @Test
@@ -13,6 +15,6 @@ public class SearchTest extends BaseTest {
         String title = "Java For Testers";
         //PropertyFileHandler.getValue("book_title")
         searchPage.search(title);
-        searchPage.checkIsBookVisible(title);
+        searchPage.checkBookVisible(title);
     }
 }

@@ -15,4 +15,18 @@ class Product {
     private double discountFactor(double basePrice) {
         return basePrice > 1000 ? 0.95 : 0.98;
     }
+
+//    void placeOrder(Order order){
+//        int orderId = order.id;
+//        String customerName = order.cusName;
+//
+//        processOrder(orderId, customerName);
+//        System.out.println("Order placed!");
+//    }
+//
+//    void placeOrder(Order order){
+//
+//        processOrder(Order order);
+//        System.out.println("Order placed!");
+//    }
 }

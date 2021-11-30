@@ -15,7 +15,7 @@ public class SearchPage {
     WebDriver driver;
     WebDriverWait wait;
     By searchBar = By.id("searchBar");
-    By visibleBooks = By.xpath("//*[@id='pid5']");
+    By visibleBooks = By.cssSelector("li:not(.ui-screen-hidden)");
 
     public SearchPage(WebDriver driver){
         this.driver = driver;
@@ -41,7 +41,7 @@ public class SearchPage {
         }
     }
 
-    public void checkIsBookVisible(String title){
+    public void checkBookVisible(String title){
         boolean isBookVisible = false;
 
         List<WebElement> books = findAndGetWebElements(visibleBooks);
@@ -51,7 +51,6 @@ public class SearchPage {
 
             if(title.equalsIgnoreCase(bookTitle)){
                 isBookVisible = true;
-                break;
             }
         }
         assertTrue(title+ " not found", isBookVisible);
